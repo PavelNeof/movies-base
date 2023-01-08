@@ -1,0 +1,32 @@
+@import "../../common/colors";
+
+.card-item {
+  background-color: $secondary-color;
+  cursor: pointer;
+}
+
+.card-top {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+
+  img {
+    padding-top: 10px;
+    height: 100%;
+  }
+}
+
+.card-bottom {
+  padding: 20px;
+}
+
+.card-info {
+  color: $font-primary;
+
+  h4 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+}
