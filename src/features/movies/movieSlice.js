@@ -29,6 +29,7 @@ export const fetchAsyncMovieOrShowDetail = createAsyncThunk('movies/fetchAsyncMo
         return response.data;
     })
 
+
 const initialState = {
     movies: {},
     shows: {},
@@ -42,6 +43,9 @@ const movieSlice = createSlice({
         addMovies: (state, {payload}) => {
             state.movies = payload;
         },
+        removeSelectedMovieOrShow: (state)=>{
+            state.selectMovieOrShow = {};
+        }
     },
     extraReducers: {
         [fetchAsyncMovies.pending]: ()=>{
@@ -65,7 +69,7 @@ const movieSlice = createSlice({
     }
 })
 
-export const {addMovies} = movieSlice.actions;
+export const {addMovies, removeSelectedMovieOrShow} = movieSlice.actions;
 export const getAllMovies = (state) => state.movies.movies;
 export const getAllShows = (state) => state.movies.shows;
 export const getSelectedMovieOrShow = (state) => state.movies.selectMovieOrShow;
