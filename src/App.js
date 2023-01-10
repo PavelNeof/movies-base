@@ -17,6 +17,7 @@ function App() {
                         <Route path={'/'} exact element={<Home/>}/>
                         <Route path={'/movie/:imdbID'} element={<MovieDetail/>}/>
                         <Route path={'*'} element={<PageNotFound/>}/>
+                        <Route path='/movies-base/' element={<Navigate to={'/'}/>}/>
                     </Routes>
                 </div>
                 <Footer/>
