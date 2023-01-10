@@ -14,8 +14,11 @@ function App() {
                 <Header/>
                 <div className="container">
                     <Routes>
-                        <Route path={'/'} exact element={<Home/>}/>
-                        <Route path={'/movie/:imdbID'} element={<MovieDetail/>}/>
+                        {/*<Route path={'/'} exact element={<Home/>}/>*/}
+                        {/*<Route path={'/movie/:imdbID'} element={<MovieDetail/>}/>*/}
+                        {/*<Route path={'*'} element={<PageNotFound/>}/>*/}
+                        <Route path={'/movies-base'} exact element={<Home/>}/>
+                        <Route path={'/movies-base/movie/:imdbID'} element={<MovieDetail/>}/>
                         <Route path={'*'} element={<PageNotFound/>}/>
                     </Routes>
                 </div>
