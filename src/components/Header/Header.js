@@ -22,8 +22,7 @@ const Header = () => {
         <div className={'header'}>
 
             <div className={'logo'}>
-                {/*<Link to={'/'}>*/}
-                    <Link to={'/movies-base'}>
+                <Link to={'/'}>
                     Movie App
                 </Link>
             </div>
