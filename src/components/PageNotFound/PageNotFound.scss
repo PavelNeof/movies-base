@@ -1,0 +1,19 @@
+@import "../../common/colors";
+
+.container-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+
+.text{
+   font-size: 22px;
+   font-weight: 400;
+   margin-bottom: 10px;
+   color:$fonst-secondary;
+  span{
+    color: $font-primary;
+  }
+ }
