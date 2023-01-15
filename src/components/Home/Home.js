@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
 import MovieListing from "../MovieListing/MovieListing";
-import MovieApi from "../../common/apis/movieApi";
-import {APIKey} from "../../common/apis/movieApiKey";
 import {useDispatch} from "react-redux";
-import {fetchAsyncMovies, fetchAsyncShows} from "../../features/movies/movieSlice";
+import {
+    fetchAsyncMovies,
+    fetchAsyncShows,
+} from "../../features/movies/movieSlice";
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const Home = () => {
         dispatch(fetchAsyncMovies(movieText))
         dispatch(fetchAsyncShows(showText))
     }, [dispatch])
+
 
     return (
         <div>
