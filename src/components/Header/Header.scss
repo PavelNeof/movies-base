@@ -49,3 +49,14 @@
     outline: none;
   }
 }
+
+@media (max-width: 730px) {
+  .header {
+    flex-direction: column;
+    height: 132px;
+    justify-content: space-around;
+  }
+  .search-bar{
+    width: 100%;
+  }
+}

@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, Navigate, useNavigate} from "react-router-dom";
 import user from "../../images/User.png";
 import "./Header.scss";
 import {useDispatch} from "react-redux";
 import {fetchAsyncMovies, fetchAsyncShows} from "../../features/movies/movieSlice";
 
 const Header = () => {
+    const navigate = useNavigate();
 
     const [term, setTerm] = useState('');
     const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const Header = () => {
         dispatch(fetchAsyncMovies(term))
         dispatch(fetchAsyncShows(term))
         setTerm('')
+        navigate('/');
     }
 
     return (
